@@ -137,7 +137,3 @@ git branch
 ---
 
 Happy coding! 🎊 Remember, practice makes perfect. Don’t hesitate to experiment in this repository and deepen your understanding of Git and GitHub! If you have any questions, feel free to ask. 🤗
-
-```
-
-```
