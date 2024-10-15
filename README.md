@@ -1,6 +1,6 @@
 # 🚀 Git Training
 
-Welcome to the **Git Training** repository! 🎉 This space is designed for you to learn and practice Git and GitHub commands without affecting any main projects. Let's dive into the world of version control together! 🌟
+Welcome to the **Git Training** repository! 🎉 This space is designed for you to learn and practice Git and GitHub commands. Let's dive into the world of version control together! 🌟
 
 ## 📚 Purpose
 
