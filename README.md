@@ -17,7 +17,7 @@ In this repository, you will:
 Start by cloning the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/git-training.git
+git clone https://github.com/KhaledKammoun/git-training.git
 ```
 
 ### 2. **Navigate to the Repository:**
