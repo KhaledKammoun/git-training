@@ -131,7 +131,7 @@ git push origin --delete feature/your-feature-name
 git fetch origin               # Fetch the latest branches from remote
 git branch -r                  # List remote branches to verify
 git checkout --track origin/your-branch-name   # Create a local copy of the remote branch
-git branch
+git branch # List local branches to verify
 ```
 
 ---
