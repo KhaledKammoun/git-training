@@ -114,7 +114,7 @@ git merge feature/your-feature-name
 After merging, you can safely delete the local feature branch:
 
 ```bash
-git branch -d feature/your-feature-name
+git branch -D feature/your-feature-name
 ```
 
 ### 11. **Delete the Remote Branch:**
@@ -123,6 +123,15 @@ If you pushed your feature branch to the remote repository and want to delete it
 
 ```bash
 git push origin --delete feature/your-feature-name
+```
+
+### 12. **Update Branches List in your local repository:**
+
+```bash
+git fetch origin               # Fetch the latest branches from remote
+git branch -r                  # List remote branches to verify
+git checkout --track origin/your-branch-name   # Create a local copy of the remote branch
+git branch # List local branches to verify
 ```
 
 ---
