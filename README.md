@@ -74,35 +74,79 @@ OR
 
 ### 10. Merge the Feature Branch with Main
 
-To merge your feature branch into the main branch:  
-<code>git merge feature/your-feature-name</code>
+To merge your feature branch into the main branch:
+
+```bash
+git merge feature/your-feature-name
+```
+
+To push the merged changes to the remote main branch:
+
+```bash
+git push origin main
+```
 
 ### 11. Delete the Feature Branch Locally
 
 After merging, you can safely delete the local feature branch:  
 <code>git branch -d feature/your-feature-name</code>
 
-### 12. Delete the Remote Branch
+# Git and GitHub Workflow
 
-If you pushed your feature branch to the remote repository and want to delete it:  
-<code>git push origin --delete feature/your-feature-name</code>
+### 11. Delete the Remote Branch
 
-### 13. Cherry-Pick a Commit
+If you’ve pushed your feature branch to the remote repository and want to delete it, use:
 
-To apply a specific commit from one branch to another, use:  
-<code>git cherry-pick &lt;commit_hash&gt;</code>
+```bash
+git push origin --delete feature/your-feature-name
+```
 
-### 14. Rebase Your Branch
+### 11.1 Restore a Deleted Branch
 
-To keep your feature branch updated with the main branch, use rebase:  
-<code>git rebase main</code>
+In case you want to restore a deleted branch, you can find the commit it pointed to using the following command (this lists all actions, including commits, from the latest to the oldest):
 
-## <span style="color: #33C1FF;">⚠️ Important Notes</span>
+```bash
+git reflog
+```
 
-- Always ensure you are on the correct branch before making changes.
-- Regularly pull changes from the main branch to avoid conflicts.
-- Use descriptive commit messages to maintain a clear project history.
+#### Steps to Restore the Branch
 
-## <span style="color: #33C1FF;">🎉 Happy Coding!</span>
+1. **Find the Target Commit SHA**  
+   Use `git reflog` to locate the commit SHA you need (e.g., `ea9d340`).
 
-Remember, practice makes perfect. Don’t hesitate to experiment in this repository and deepen your understanding of Git and GitHub! If you have any questions, feel free to ask. 🤗
+2. **Recreate the Branch Locally**  
+   Replace `your-feature-name` with the name of the branch you want to restore:
+
+   ```bash
+   git checkout -b feature/your-feature-name ea9d340
+   ```
+
+3. **Push the Branch Back to GitHub (Optional)**  
+   Push the restored branch back to the remote repository:
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+### 12. Update Branches List in Your Local Repository
+
+To update your local repository with the latest branches from the remote:
+
+```bash
+git fetch origin               # Fetch the latest branches from remote
+git branch -r                  # List remote branches to verify
+git checkout --track origin/your-branch-name   # Create a local copy of the remote branch
+git branch                     # List local branches
+```
+
+### 13. Synchronize Branches
+
+To keep your branch synchronized with another branch, use:
+
+```bash
+git pull origin branch-name
+```
+
+---
+
+Happy coding! 🎊 Remember, practice makes perfect. Don’t hesitate to experiment in this repository and deepen your understanding of Git and GitHub! If you have any questions, feel free to ask. 🤗
