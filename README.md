@@ -41,12 +41,19 @@ git checkout -b feature/your-feature-name
 Once you've made your changes, add them to the staging area and commit:
 
 ```bash
+# Stage all changes
 git add .
+
+# Unstage everything (if needed)
 git restore --staged .
 
+# Stage a single file
 git add file_name
+
+# Unstage a single file (if needed)
 git restore --staged file_name
 
+# Commit the currently staged changes
 git commit -m "Your commit message"
 
 # Completely delete the last commit AND the changes
