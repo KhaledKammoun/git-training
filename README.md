@@ -42,7 +42,17 @@ Once you've made your changes, add them to the staging area and commit:
 
 ```bash
 git add .
+git restore --staged .
+
+git add file_name
+git restore --staged file_name
+
 git commit -m "Your commit message"
+
+# Completely delete the last commit AND the changes
+git reset --hard HEAD~1
+# Create a new commit that reverses the changes of the target commit
+git revert abc1234
 ```
 
 🔔 **Note:** You can also use the command below to add and commit changes in one step, but remember, this only works for files that have already been tracked by Git (i.e., files previously added to the repository):
